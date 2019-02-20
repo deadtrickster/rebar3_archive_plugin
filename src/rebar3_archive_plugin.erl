@@ -1,7 +1,8 @@
 -module(rebar3_archive_plugin).
 
 -export([init/1,
-         do/1]).
+         do/1,
+         format_error/1]).
 
 -define(PROVIDER, archive).
 -define(DEPS, [compile]).
@@ -68,3 +69,7 @@ to_list(Dir, Type, Files) ->
 
 to_string(List) ->
   binary_to_list(iolist_to_binary(List)).
+
+-spec format_error(any()) -> iolist().
+format_error(Reason) ->
+    io_lib:format("~p", [Reason]).
