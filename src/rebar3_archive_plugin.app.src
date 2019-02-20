@@ -1,6 +1,6 @@
 {application, rebar3_archive_plugin,
  [{description, "Rebar3 Code Archive plugin"},
-  {vsn, "0.0.1"},
+  {vsn, "0.0.2"},
   {registered, []},
   {applications,
    [kernel,
