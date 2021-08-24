@@ -39,7 +39,7 @@ do(State) ->
   Res.
 
 archive(State, App) ->
-  Vsn = rebar_app_info:original_vsn(App),
+  Vsn = rebar_app_info:vsn(App),
   Name = rebar_app_info:name(App),
 
   Dir = to_string([Name, "-", Vsn]),
